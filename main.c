@@ -24,10 +24,10 @@ struct gpiod_line *cs;
 
 int main() {
     unsigned char data_read[g_iDataSize];
-    unsigned int start_address = 0x000000;
+    unsigned int start_address = 0x000000; //start address where to write
 
 	
-    spi_init(300*1024,&cs);
+    spi_init(3000,&cs);// 3000 means 3 MHz
 
     //Device ID read 	
     device_id();
@@ -50,9 +50,6 @@ int main() {
     SR_check();
     printf("Finished Erasing\n");
 
-    
-    //Write Enable
-    write_enable();
     
     usleep(1);
    

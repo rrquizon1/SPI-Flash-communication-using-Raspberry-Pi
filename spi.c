@@ -43,7 +43,7 @@ int spi_init(int spi_speed,struct gpiod_line **cs){
 
 	// setup spi via ioctl
 
-	speed = spi_speed;
+	speed = spi_speed*1024;
 
 	spi_fd = open("/dev/spidev0.0", O_RDWR);
 	if (spi_fd < 0) {
