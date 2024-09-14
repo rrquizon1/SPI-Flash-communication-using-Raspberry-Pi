@@ -5,11 +5,17 @@ This example uses lgpiod library so make sure to install it: sudo apt-get instal
 This project uses Windbond SPI flash W25Q128. You can check this device's datasheet [here](https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&partNo=W25Q128FV).
 
 The following commands from the datasheet are used for this example:
+
 DeviceID read: 90h
+
 Write Enable: 06h
+
 Chip Erase: C7h
+
 Read Status Register: 05h
+
 Page Program: 02h
+
 Read Data: 03h
 
 Steps to run the project:
